@@ -3,42 +3,49 @@
     "name": "John Doe",
     "course": "Python",
     "age": 20,
-    "major": "Computer Science"
+    "major": "Computer Science",
+    "marks": 85
   },
   "s002": {
     "name": "Jane Smith",
     "course": "Mathematics",
     "age": 22,
+    "marks": 90,
     "major": "Mathematics"
   },
   "s003": {
     "name": "Smith Johnson",
     "course": "Mathematics",
     "age": 22,
+    "marks": 88,
     "major": "Mathematics"
   },
   "s006": {
     "name": "Smith Johnson",
     "course": "Python",
     "age": 29,
+    "marks": 47,
     "major": "Mathematics"
   },
   "s004": {
     "name": "Emily Davis",
     "course": "Physics",
     "age": 21,
+    "marks": 92,
     "major": "Physics"
   },
   "s005": {
     "name": "Michael Brown",
     "course": "Chemistry",
     "age": 23,
+    "marks": 78,
     "major": "Chemistry"
   },
   "s007": {
     "name": "jal Brown",
     "course": "ds",
     "age": 23,
+    "marks": 78,
     "major": "Chemistry"
   }
 }

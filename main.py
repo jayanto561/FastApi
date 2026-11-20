@@ -45,3 +45,24 @@ def filter(course:str=Query(None,description="Filter students by course")):
         if info["course"].lower()==course.lower():
             filtered[student_id]=info
     return filtered
+
+sort_filds=["name","age","course"]
+sort_order=["asc","desc"]
+@app.get("/sort")
+def sort_students(
+    sort_by:str,
+    sort_order:str
+):
+    if sort_by not in sort_filds:
+        raise HTTPException(status_code=400, detail=f"Invalid sort field. Must be one of {sort_filds}")
+    if sort_order not in sort_order:
+        raise HTTPException(status_code=400, detail="Invalid sort order. Must be 'asc' or 'desc'")
+    
+    data=load_data()
+    student =[]
+    for student_id, info in data.items():
+        info["id"] = student_id
+        student.append(info)
+    reverse =( sort_order=="desc")
+    sorted_students=sorted(student,key= lambda x:x[sort_by],reverse=reverse)
+    return sorted_students
