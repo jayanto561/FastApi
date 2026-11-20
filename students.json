@@ -1,0 +1,27 @@
+{
+  "s001": {
+    "name": "John Doe",
+    "age": 20,
+    "major": "Computer Science"
+  },
+  "s002": {
+    "name": "Jane Smith",
+    "age": 22,
+    "major": "Mathematics"
+  },
+  "s003": {
+    "name": "Smith Johnson",
+    "age": 29,
+    "major": "Mathematics"
+  },
+  "s004": {
+    "name": "Emily Davis",
+    "age": 21,
+    "major": "Physics"
+  },
+  "s005": {
+    "name": "Michael Brown",
+    "age": 23,
+    "major": "Chemistry"
+  }
+}
