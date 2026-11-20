@@ -1,4 +1,4 @@
-from fastapi import FastAPI,HTTPException, Path
+from fastapi import FastAPI,HTTPException, Path, Query
 import json
 
 app = FastAPI()
@@ -30,3 +30,18 @@ def get_id(student_id:str=Path(...,description="The ID of the student to retriev
         raise HTTPException(status_code=404, 
                             detail=f"Student not '{student_id}' found")    
     return data[student_id]
+
+
+# ? er por query thakbe
+
+
+@app.get("/filter")
+def filter(course:str=Query(None,description="Filter students by course")):
+    data=load_data()
+    if course is None:
+        return data
+    filtered = {}
+    for student_id, info in data.items():
+        if info["course"].lower()==course.lower():
+            filtered[student_id]=info
+    return filtered
